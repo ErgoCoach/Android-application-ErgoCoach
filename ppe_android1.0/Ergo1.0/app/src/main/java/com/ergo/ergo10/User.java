@@ -16,9 +16,8 @@ public class User {
     private int taille;
     private int annee_de_naissance;*/
 
-    public User(long id, String pseudo, String motdepasse/*, String nom, String prenom, String mail, int poids, int taille, int annee_de_naissance*/) {
-        super();
-        this.id = id;
+    public User( String pseudo, String motdepasse/*, String nom, String prenom, String mail, int poids, int taille, int annee_de_naissance*/) {
+
         this.pseudo = pseudo;
         this.motdepasse = motdepasse;
         /*this.nom = nom;
@@ -102,4 +101,7 @@ public class User {
     public void setAnnee_de_naissance(int motdepasse) {
         this.annee_de_naissance = annee_de_naissance;
     }*/
+    public String toString(){
+        return "ID : "+id+"\nPseudo : "+pseudo+"\nMot de passe : "+motdepasse;
+    }
 }

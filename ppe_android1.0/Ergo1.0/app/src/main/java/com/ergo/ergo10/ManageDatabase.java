@@ -63,14 +63,14 @@ public class ManageDatabase {
         return bdd.update(TABLE_USERS, values, COL_ID + " = " +id, null);
     }
 
-    public int removeUserWithID(int id){
+    public int removeUserWithID(long id){
         //Suppression d'un User de la BDD grâce à l'ID
         return bdd.delete(TABLE_USERS, COL_ID + " = " +id, null);
     }
 
     public User getUserWithTitre(String titre){
-        //Récupère dans un Cursor les valeur correspondant à un User contenu dans la BDD (ici on sélectionne le User grâce à son titre)
-        Cursor c = bdd.query(TABLE_USERS, new String[] {COL_ID ,COL_PSEUDO, COL_MDP}, COL_MDP + " LIKE \"" + titre +"\"", null, null, null, null);
+        //Récupère dans un Cursor les valeur correspondant à un User contenu dans la BDD (ici on sélectionne le User grâce à son pseudo titre)
+        Cursor c = bdd.query(TABLE_USERS, new String[] {COL_ID ,COL_PSEUDO, COL_MDP}, COL_PSEUDO + " LIKE \"" + titre +"\"", null, null, null, null);
         return cursorToUser(c);
     }
 

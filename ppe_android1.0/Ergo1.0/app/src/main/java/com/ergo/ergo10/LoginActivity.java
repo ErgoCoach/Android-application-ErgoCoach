@@ -28,6 +28,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -66,6 +67,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
+    private ManageDatabase manager ;
+    private String pseudo ;
+    private String motdepasse;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -103,16 +107,21 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
         //Création d'une instance de ma classe LivresBDD
-        ManageDatabase manager = new ManageDatabase(this);
+        manager = new ManageDatabase(this);
 
-        //Création d'un livre
-        User testeur1 = new User("testeurun", "mdpbidon");
+        //Création d'un user
 
         //On ouvre la base de données pour écrire dedans
         manager.open();
         //On insère le livre que l'on vient de créer
-        manager.insertLivre(testeur1);
-
+        /*User testtesteur1 = manager.getUserWithTitre("testeurun");
+        //S'il existe un livre possédant ce titre dans la BDD
+        if(testtesteur1 != null){
+            //On affiche les nouvelle info du livre pour vérifié que le titre du livre a bien été mis à jour
+            Toast.makeText(this, testtesteur1.toString(), Toast.LENGTH_LONG).show();
+            //on supprime le livre de la BDD grâce à son ID
+            manager.removeUserWithID(testtesteur1.getId());
+        }*/
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
@@ -178,8 +187,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         // Store values at the time of the login attempt.
         String email = mEmailView.getText().toString();
-        String password = mPasswordView.getText().toString();
+        pseudo = mEmailView.getText().toString();
+        motdepasse = mPasswordView.getText().toString();
 
+        String password = mPasswordView.getText().toString();
+        Toast.makeText(this, pseudo+" enregistré dans la base", Toast.LENGTH_LONG).show();
+        User newUser = new User(pseudo, motdepasse);
+        manager.insertUser(newUser);
         boolean cancel = false;
         View focusView = null;
 
