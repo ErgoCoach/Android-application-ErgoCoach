@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sign_in"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/back1"
+    tools:context="com.ergo.ppe_android11.InscriptionActivity"
+
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/backto"
+                    android:id="@+id/backtofirsti"
+                    android:background="@drawable/backto"
+                    android:gravity="center" />
+
+                <TextView
+                    android:text="INSCRIPTION"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/inscriptiontxt"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Snow"
+                    android:textSize="36sp"
+                    android:gravity="center"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <TextView
+                android:text="@string/mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:textColor="@color/White"
+                android:gravity="center"
+                android:id="@+id/tmail" />
+
+            <EditText
+            android:layout_width="242dp"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:layout_below="@+id/tmail"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/editmail"
+            android:gravity="center"
+                android:layout_gravity="center" />
+
+            <TextView
+            android:text="@string/first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/White"
+                android:gravity="center"
+                android:id="@+id/prenomtxt"
+            android:layout_below="@+id/editmail"
+            android:layout_alignLeft="@+id/tmail"
+            android:layout_alignStart="@+id/tmail" />
+
+            <EditText
+            android:layout_width="242dp"
+            android:layout_height="wrap_content"
+                android:inputType="text"
+            android:layout_below="@+id/prenomtxt"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/editprenom"
+                android:gravity="center"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:text="@string/pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editpass"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/White"
+                android:gravity="center"
+                android:id="@+id/passtxt" />
+
+            <EditText
+                android:layout_width="242dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/editpass"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="123"
+                android:layout_gravity="center" />
+            <TextView
+                android:text="@string/confirmmdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editpass"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/White"
+                android:gravity="center"
+                android:id="@+id/passtxtconfirm" />
+
+            <EditText
+                android:layout_width="242dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/editpassconfirm"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:text="TAILLE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/tailletxt"
+                android:textColor="@color/White"
+                android:gravity="center"
+                android:layout_below="@+id/passtxt"
+                android:layout_alignRight="@+id/editpass"
+                android:layout_alignEnd="@+id/editpass" />
+
+            <Spinner
+                android:layout_width="242dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnermorphoins"
+                android:entries="@array/listmorpho"
+                android:prompt="@+string/morpho"
+                android:layout_gravity="center" />
+
+
+                <TextView
+                android:text="@string/birth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/birthtxt"
+                android:textColor="@color/White"
+                android:gravity="center"
+                android:layout_below="@+id/passtxt"
+                android:layout_alignRight="@+id/editpass"
+                android:layout_alignEnd="@+id/editpass" />
+
+                <EditText
+                    android:layout_width="242dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:ems="10"
+                    android:layout_below="@+id/birthtxt"
+                    android:layout_alignLeft="@+id/editmail"
+                    android:layout_alignStart="@+id/editmail"
+                    android:id="@+id/editbirth"
+                    android:gravity="center"
+                    android:layout_gravity="center" />
+
+
+                <Button
+                    android:text="@android:string/ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="13dp"
+                    android:id="@+id/buttonok"
+                    android:background="@color/Black"
+                    android:textColor="@color/Snow"
+                    android:layout_gravity="center"/>
+
+
+            </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

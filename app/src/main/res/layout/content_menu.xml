@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.ergo.ppe_android11.MenuActivity"
+    tools:showIn="@layout/activity_menu"
+   android:background="@color/Black">
+
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+    
+    
+            <ImageButton
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/profil"
+                android:background="@drawable/profil2" />
+    
+            <ImageButton
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/parametres"
+                android:background="@drawable/settings3" />
+
+            <ImageButton
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/info"
+                android:background="@drawable/info2" />
+
+            <ImageButton
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/exit"
+                android:background="@drawable/stopicon2"
+                android:layout_row="2"
+                android:layout_column="0" />
+
+            <ImageButton
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/coaching"
+                android:background="@drawable/coach2"
+                android:layout_row="3"
+                android:layout_column="1" />
+    
+            <ImageButton
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/reel"
+                android:background="@drawable/reel2"
+                android:layout_row="1"
+                android:layout_column="0"/>
+
+            <ImageButton
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/evolution"
+                android:background="@drawable/evolution2"
+                android:layout_row="3"
+                android:layout_column="0" />
+
+            <ImageButton
+                android:layout_width="240dp"
+                android:layout_height="240dp"
+                android:id="@+id/logogros"
+                android:layout_row="1"
+                android:layout_columnSpan="2"
+                android:layout_rowSpan="2"
+                android:layout_column="1"
+                app:srcCompat="@drawable/logo4"
+                android:background="@color/Snow"
+                 />
+            <ImageButton
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/bilan"
+                android:background="@drawable/noteicon2"
+                android:layout_row="3"
+                android:layout_column="2" />
+        </GridLayout>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

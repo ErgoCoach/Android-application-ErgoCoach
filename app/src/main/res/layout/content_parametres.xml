@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_parametres"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.ergo.ppe_android11.ParametresActivity"
+    tools:showIn="@layout/activity_parametres"
+    android:background="@drawable/back1"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+     >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/backto"
+                    android:id="@+id/backtofirsti"
+                    android:background="@drawable/backto"
+                    android:gravity="center" />
+
+                <TextView
+                    android:text="PARAMETRES"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/parametrestxt"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Snow"
+                    android:textSize="36sp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/blocparam"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/rgcompte"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:text="Compte"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView4"
+                        android:background="@color/blackt"
+                        android:textColor="@color/Snow"
+                        android:layout_centerHorizontal="true"  />
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="@string/nom"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textViewNom"
+                            android:layout_weight="1"
+                            />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:ems="10"
+                            android:id="@+id/editTextNom"
+                            android:hint="Editer le nom"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="@string/email"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textViewMail"
+                            android:layout_weight="1" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:ems="10"
+                            android:id="@+id/editTextMail"
+                            android:hint="Editer le mail"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="@string/password"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textViewPass"
+                            android:layout_weight="1"
+                            android:hint="Modifier le nom" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:ems="10"
+                            android:id="@+id/editTextPass"
+                            android:hint="Editer le mot de passe"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="@string/anneebirth"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textViewBirth"
+                            android:layout_weight="1" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:ems="10"
+                            android:id="@+id/editTextBirth"
+                            android:hint="Editer l'année de naissance"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:text="@string/save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/buttonsave"
+                            android:layout_weight="1"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:text="@string/reset"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/button2"
+                            android:layout_weight="1"
+                            tools:ignore="ButtonStyle" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titrecoaching"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+
+                    android:id="@+id/rgmorpho"
+                    android:layout_marginLeft="5dp">
+
+                    <TextView
+                        android:text="Activité"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView2"
+                        android:layout_weight="1"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/blackt"
+                        android:textColor="@color/Snow"
+                        />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinneractivite"
+                        android:entries="@array/listactivite"
+                        android:prompt="@+string/activite"
+                        android:layout_weight="1" />
+
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignLeft="@+id/titrecoaching"
+                    android:layout_alignStart="@+id/titrecoaching"
+                    android:id="@+id/rgactivite"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginLeft="5dp">
+
+                    <TextView
+                        android:text="@string/morpho"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/blackt"
+                        android:id="@+id/activite"
+                        android:layout_weight="1"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/Snow"/>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnermorpho"
+                        android:entries="@array/listmorpho"
+                        android:prompt="@+string/morpho"
+                        android:layout_weight="1" />
+
+                </RadioGroup>
+
+                <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_alignLeft="@+id/titrecoaching"
+                android:layout_alignStart="@+id/titrecoaching"
+                android:id="@+id/rglangue"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="5dp">
+
+                <TextView
+                    android:text="Langue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blackt"
+                    android:textColor="@color/Snow"
+                    android:id="@+id/language"
+                    android:layout_weight="1"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerlangue"
+                        android:entries="@array/listlangue"
+                        android:prompt="@+string/morpho"
+                        android:layout_weight="1"/>
+
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titrecoaching"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/rgautre"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:text="Autre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView3"
+                        android:textColor="@color/Snow"
+                        android:background="@color/blackt"
+                        android:layout_centerHorizontal="true"  />
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:text="Aide et assistance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/buttonaide"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:text="Personnaliser Ergo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/buttonperso"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
