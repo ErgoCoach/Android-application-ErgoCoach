@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_coaching"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.ergo.ppe_android11.CoachingActivity"
+    tools:showIn="@layout/activity_coaching"
+    android:background="@drawable/back1"
+    >
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/backto"
+                        android:id="@+id/backtofirsti"
+                        android:background="@drawable/backto"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:text="COACHING"
+                        android:layout_alignParentTop="true"
+                        android:id="@+id/coachingtxt"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/Snow"
+                        android:textSize="36sp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <CalendarView
+                        android:layout_width="wrap_content"
+                        android:layout_height="290dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/calendarCoaching"/>
+
+                    <TextView
+                        android:text="@string/coachingdu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/titrecoachingdujour"
+                        android:gravity="bottom" />
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/coachingdujour" />
+                </LinearLayout>
+            </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
